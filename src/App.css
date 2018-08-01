@@ -1,6 +1,77 @@
-.App {
+.flex-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.text {
-    color: blue;
+.box {
+    border: solid;
+    width: 50%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+.input-border {
+    margin: 2% 1% 2% 1%;
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.small-button {
+    width: 5%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.url-input {
+    border: none;
+    padding-left: 2%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.form {
+    width: 80%;
+}
+
+.hide-file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#upload-svg {
+    fill: #222222;
+    animation-name: upload-button-unhover;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+#upload-svg:hover{
+    animation-name: upload-button-hover;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+#cancel-svg {
+    fill: red;
+}
+
+@keyframes upload-button-hover {
+    from { fill : #222222;}
+    to {fill : #c431bd;}
+}
+@keyframes upload-button-unhover {
+    from {fill : #c431bd;}
+    to { fill : #222222;}
+}
+
+
